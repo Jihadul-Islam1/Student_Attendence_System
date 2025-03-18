@@ -4,112 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>শিক্ষার্থী ড্যাশবোর্ড - PSTU</title>
-    <style>
-      
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #283593;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-        }
-
-        nav {
-            background-color: #3f51b5;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            margin: 0 10px;
-            border-radius: 5px;
-        }
-
-        nav a:hover {
-            background-color: #5c6bc0;
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        .card {
-            background-color: white;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-
-        .card h2 {
-            margin-top: 0;
-        }
-
-        .card p {
-            font-size: 20px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        table th, table td {
-            padding: 10px;
-            border: 1px solid #ddd;
-            text-align: left;
-        }
-
-        footer {
-            text-align: center;
-            background-color: #283593;
-            color: white;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>পটুয়াখালী বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়</h1>
+        <h1>student ড্যাশবোর্ড</h1>
+        <nav>
+            <a href="student_dashboard.html" class="btn-primary">
+                <i class="fas fa-tachometer-alt"></i> ড্যাশবোর্ড
+            </a>
+            <a href="attendance_details.html" class="btn-primary">
+                <i class="fas fa-clipboard-list"></i> উপস্থিতি
+            </a>
+            <a href="courses.html" class="btn-primary">
+                <i class="fas fa-book-open"></i> কোর্স
+            </a>
+            <a href="profile.html" class="btn-primary">
+                <i class="fas fa-cog"></i> প্রোফাই
+            </a>
+            <a href="index.html" class="btn-success">
+                <i class="fas fa-sign-out-alt"></i> প্রস্থান
+            </a>
+        </nav>
     </header>
 
-    <nav>
-        <a href="student_dashboard.html">ড্যাশবোর্ড</a>
-        <a href="attendance_details.html">উপস্থিতি</a>
-        <a href="courses.html">কোর্স</a>
-        <a href="profile.html">প্রোফাইল</a>
-        <a href="index.html">প্রস্থান</a>
-    </nav>
-
     <main>
+        <!-- Attendance Summary -->
         <div class="card">
-            <h2>মোট উপস্থিতি</h2>
+            <h2><i class="fas fa-chart-pie"></i> মোট উপস্থিতি</h2>
             <p>৮৫%</p>
         </div>
 
+        <!-- Course-wise Attendance -->
         <div class="card">
-            <h2>কোর্সভিত্তিক উপস্থিতি</h2>
-            <p></p>
+            <h2><i class="fas fa-list-alt"></i> কোর্সভিত্তিক উপস্থিতি</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>কোর্স</th>
+                        <th>উপস্থিতি</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CSE 101</td>
+                        <td>৮৭%</td>
+                    </tr>
+                    <tr>
+                        <td>MAT 201</td>
+                        <td>৮০%</td>
+                    </tr>
+                    <tr>
+                        <td>PHY 103</td>
+                        <td>৯০%</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
+        <!-- Recent Classes -->
         <div class="card">
-            <h2>সাম্প্রতিক ক্লাস</h2>
+            <h2><i class="fas fa-calendar-day"></i> সাম্প্রতিক ক্লাস</h2>
             <table>
                 <thead>
                     <tr>
@@ -142,5 +99,112 @@
     <footer>
         <p>&copy; ২০২৩ PSTU - কম্পিউটার বিজ্ঞান ও প্রকৌশল বিভাগ</p>
     </footer>
+
+    <style>
+       .schedule-item {
+            background: #f8f9fa;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .student-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .attendance-status {
+            padding: 0.5rem;
+            align-items: center;
+            border-radius: 6px;
+            border: 2px solid var(--primary-blue);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+
+        .stat-item h3 {
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--accent-green);
+        }
+
+        .loading-text {
+            color: var(--secondary-blue);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        main {
+            padding: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between;
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(33.333% - 2rem); /* 3 columns */
+            min-width: 350px;
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        .card table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .card table th,
+        .card table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .card p {
+            font-size: 20px;
+            font-weight: bold;
+            color: #3f51b5;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #283593;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </body>
 </html>

@@ -115,8 +115,7 @@
     </main>
 
     <style>
-        
-        .schedule-item {
+          .schedule-item {
             background: #f8f9fa;
             padding: 1rem;
             margin: 0.5rem 0;
@@ -136,6 +135,7 @@
 
         .attendance-status {
             padding: 0.5rem;
+            align-items: center;
             border-radius: 6px;
             border: 2px solid var(--primary-blue);
         }
@@ -162,6 +162,28 @@
             font-size: 1.8rem;
             font-weight: bold;
             color: var(--accent-green);
+        }
+
+        .loading-text {
+            color: var(--secondary-blue);
+            text-align: center;
+            padding: 2rem;
+        }
+        main {
+            padding: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between;
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(33.333% - 2rem); /* 3 columns */
+            min-width: 350px;
         }
 
         .loading-text {
