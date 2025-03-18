@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>শিক্ষার্থী ড্যাশবোর্ড - PSTU</title>
+    <style>
+      
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #283593;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #3f51b5;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 0 10px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #5c6bc0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        .card p {
+            font-size: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #283593;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>পটুয়াখালী বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়</h1>
+    </header>
+
+    <nav>
+        <a href="student_dashboard.html">ড্যাশবোর্ড</a>
+        <a href="attendance_details.html">উপস্থিতি</a>
+        <a href="courses.html">কোর্স</a>
+        <a href="profile.html">প্রোফাইল</a>
+        <a href="index.html">প্রস্থান</a>
+    </nav>
+
+    <main>
+        <div class="card">
+            <h2>মোট উপস্থিতি</h2>
+            <p>৮৫%</p>
+        </div>
+
+        <div class="card">
+            <h2>কোর্সভিত্তিক উপস্থিতি</h2>
+            <p></p>
+        </div>
+
+        <div class="card">
+            <h2>সাম্প্রতিক ক্লাস</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>তারিখ</th>
+                        <th>কোর্স</th>
+                        <th>স্ট্যাটাস</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>২০২৫-১০-০১</td>
+                        <td>CSE 101</td>
+                        <td>উপস্থিত</td>
+                    </tr>
+                    <tr>
+                        <td>২০২৫-১০-০২</td>
+                        <td>MAT 201</td>
+                        <td>অনুপস্থিত</td>
+                    </tr>
+                    <tr>
+                        <td>২০২৫-১০-০৩</td>
+                        <td>PHY 103</td>
+                        <td>উপস্থিত</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; ২০২৩ PSTU - কম্পিউটার বিজ্ঞান ও প্রকৌশল বিভাগ</p>
+    </footer>
+</body>
+</html>

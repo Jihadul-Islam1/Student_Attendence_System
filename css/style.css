@@ -1,0 +1,136 @@
+/* Updated CSS with your requested styles + enhancements */
+:root {
+   --primary-blue: #004080;  /* Your requested blue */
+   --secondary-blue: #002d5a;
+   --accent-green: #4CAF50;
+   --accent-red: #F44336;
+   --light-bg: #f4f4f4;
+   --dark-text: #333;
+   --light-text: white;
+}
+
+/* Global Styles */
+body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   background-color: var(--light-bg);
+   text-align: center;
+}
+
+/* Header Styles */
+header {
+   background-color: var(--primary-blue);
+   color: var(--light-text);
+   padding: 20px;
+   box-shadow: 0 4px 12px rgba(62, 61, 61, 0.1);
+}
+
+/* Navigation Styles */
+nav {
+   background: #120f0f;
+   padding: 10px;
+   display: flex;
+   justify-content: center;
+   gap: 15px;
+}
+
+nav a {
+   color: var(--light-text);
+   margin: 0 10px;
+   text-decoration: none;
+   font-size: 18px;
+   padding: 8px 15px;
+   border-radius: 5px;
+   transition: all 0.3s ease;
+}
+
+nav a:hover {
+   text-decoration: none;
+   background: rgba(99, 78, 78, 0.1);
+}
+
+/* Welcome Section */
+.welcome {
+   padding: 20px;
+   background: white;
+   margin: 20px auto;
+   width: 80%;
+   border-radius: 10px;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid Container */
+.grid-container {
+   display: flex;
+   justify-content: center;
+   gap: 20px;
+   padding: 20px;
+   flex-wrap: wrap;
+}
+
+/* Card Styles */
+.card {
+   background: white;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+   width: 250px;
+   transition: transform 0.3s ease;
+   margin: 10px;
+}
+
+.card:hover {
+   transform: translateY(-5px);
+}
+
+/* Button Styles */
+.btn {
+   display: inline-block;
+   margin-top: 10px;
+   padding: 10px 25px;
+   background: var(--primary-blue);
+   color: var(--light-text);
+   text-decoration: none;
+   border-radius: 5px;
+   transition: all 0.3s ease;
+   border: none;
+   cursor: pointer;
+}
+
+.btn:hover {
+   background: var(--secondary-blue);
+   letter-spacing: 0.5px;
+}
+
+/* Footer Styles */
+footer {
+   background: #222;
+   color: var(--light-text);
+   padding: 20px;
+   margin-top: 30px;
+   position: relative;
+   bottom: 0;
+   width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+   .grid-container {
+       flex-direction: column;
+       align-items: center;
+   }
+   
+   .card {
+       width: 80%;
+   }
+   
+   nav {
+       flex-wrap: wrap;
+       gap: 10px;
+   }
+   
+   nav a {
+       margin: 5px;
+   }
+}

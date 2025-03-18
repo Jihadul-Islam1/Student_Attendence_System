@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Control Panel</h1>
+        <nav>
+            <a href="admin.html">Dashboard</a>
+            <a href="courses.html">Manage Courses</a>
+            <a href="profile.html">Users</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>User Management</h2>
+            <table>
+                <tr>
+                    <th>User ID</th>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+                </tr>
+                <tr>
+                    <td>20231001</td>
+                    <td>Rahim Khan</td>
+                    <td>Student</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Add New Course</h2>
+            <form>
+                <input type="text" placeholder="Course Code">
+                <input type="text" placeholder="Course Name">
+                <button>Add Course</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

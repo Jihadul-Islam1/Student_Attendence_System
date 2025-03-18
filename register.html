@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PSTU - Registration</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Create New Account</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login_student.html">Student Login</a>
+            <a href="login_teacher.html">Teacher Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <form>
+            <label>Full Name:</label>
+            <input type="text" required>
+
+            <label>University ID:</label>
+            <input type="text" required>
+
+            <label>Email:</label>
+            <input type="email" required>
+
+            <label>Password:</label>
+            <input type="password" required>
+
+            <label>User Type:</label>
+            <select>
+                <option>Student</option>
+                <option>Teacher</option>
+            </select>
+
+            <button type="submit">Register</button>
+        </form>
+        
+        <p>Already have an account? <a href="login_student.html">Login here</a></p>
+    </main>
+</body>
+</html>
